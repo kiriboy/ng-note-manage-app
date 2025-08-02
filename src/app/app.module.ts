@@ -11,6 +11,8 @@ import { AboutComponent } from './Pages/about/about.component';
 import { FormsModule } from '@angular/forms';
 import { ImportantFirstPipe } from './pipes/important-first.pipe';
 
+import { HttpClientModule } from '@angular/common/http'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +26,9 @@ import { ImportantFirstPipe } from './pipes/important-first.pipe';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
