@@ -1,0 +1,37 @@
+.app-header {
+    background-color: #3f51b5;
+    color: #fff;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.app-header h1 {
+    margin: 0;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+.app-header nav {
+    display: flex;
+    gap: 20px;
+}
+
+.app-header nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.app-header nav a.active {
+    color: #ffeb3b;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.app-header nav a:hover {
+    color: #ffeb3b;
+}

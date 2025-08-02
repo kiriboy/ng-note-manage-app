@@ -1,0 +1,18 @@
+<div class="note-item">
+    <div class="note-header">
+        <h2 class="note-title">{{note.title}}</h2>
+        <label class="important-checkbox">
+            <input type="checkbox" [checked]="note.isImportant" (change)="onToggle(note)"/>
+            Important
+        </label>
+    </div>
+    <div class="note-description">
+        {{note.description}}
+    </div>
+    <div class="note-action">
+        <button class="btn btn-delete" (click)="onDeleteItem(note)">Delete</button>
+    </div>
+<style>
+
+</style>
+

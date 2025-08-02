@@ -1,0 +1,11 @@
+<div class="center-notes-item">
+
+    <ng-container *ngIf="allNotes.length > 0">
+        <app-notes-item
+            *ngFor="let note of allNotes | importantFirst"
+            [note]="note"
+            (deleteNote)="deleteNote($event)">
+        </app-notes-item>
+    </ng-container>
+    <h1 *ngIf="allNotes.length <= 0"> No Notes to display. Please add notes first</h1>
+</div>

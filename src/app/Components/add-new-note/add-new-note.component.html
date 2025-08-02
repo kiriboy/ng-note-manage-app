@@ -1,0 +1,30 @@
+<div>
+    <form #form="ngForm" (ngSubmit)="submitForm()" novalidate>
+        <div>
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" [(ngModel)]="title" required #titleRef="ngModel">
+            <div *ngIf="titleRef.invalid && (titleRef.dirty || titleRef.touched)" style="color:red;">
+                Title is required.
+            </div>
+        </div>
+        <div>
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" [(ngModel)]="description" required #descRef="ngModel"></textarea>
+            <div *ngIf="descRef.invalid && (descRef.dirty || descRef.touched)" style="color:red;">
+                Description is required.
+            </div>
+        </div>
+        <div>
+            <label for="isImportant">Is Important:</label>
+            <input type="checkbox" id="isImportant" [(ngModel)]="isImportant" name="isImportant">
+        </div>
+        <button 
+            value="Submit" 
+            type="submit" 
+            [disabled]="form.invalid"
+            [ngStyle]="form.invalid ? {'background-color': '#ccc', 'color': '#666', 'cursor': 'not-allowed'} : {}"
+        >
+            Add Note
+        </button>
+    </form>
+</div>

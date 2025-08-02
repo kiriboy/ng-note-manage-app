@@ -1,0 +1,7 @@
+.center-notes-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; /* Adjust as needed */
+    flex-direction: column;
+}
