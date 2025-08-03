@@ -11,7 +11,8 @@ import { AboutComponent } from './Pages/about/about.component';
 import { FormsModule } from '@angular/forms';
 import { ImportantFirstPipe } from './pipes/important-first.pipe';
 
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { HighlightDirective } from './directives/highlight/highlight.directive'
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HttpClientModule } from '@angular/common/http'
     NotesItemComponent,
     AddNewNoteComponent,
     AboutComponent,
-    ImportantFirstPipe
+    ImportantFirstPipe,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,

@@ -1,10 +1,20 @@
 <div class="note-item">
     <div class="note-header">
+        <h2>Pick a highlight color</h2>
+        <div>
+        <input type="radio" name="colors" (click)="color='lightgreen'">Green
+        <input type="radio" name="colors" (click)="color='yellow'">Yellow
+        <input type="radio" name="colors" (click)="color='cyan'">Cyan
+        </div>
+    </div>
+    <div class="note-header">
         <h2 class="note-title">{{note.title}}</h2>
-        <label class="important-checkbox">
+        <label class="important-checkbox" >
             <input type="checkbox" [checked]="note.isImportant" (change)="onToggle(note)"/>
             Important
         </label>
+        
+        <p  [appHighlight]="color" defaultColor="blue">Test directive</p>
     </div>
     <div class="note-description">
         {{note.description}}

@@ -9,6 +9,8 @@ import { NoteService } from 'src/app/Services/note.service';
 })
 export class NotesItemComponent {
 
+  color = ''
+
 @Input() note!:Notes
 
 @Output() deleteNote:EventEmitter<Notes> = new EventEmitter()
